@@ -97,6 +97,7 @@ actor DownloadTask: Identifiable {
                 chapter: chapter,
                 skipDownloadedCheck: true
             )) ?? []
+            guard downloads.count >= downloadIndex else { return }
             downloads[downloadIndex].total = pages.count
         }
         while currentPage < pages.count && running {
