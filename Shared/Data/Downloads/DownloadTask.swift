@@ -82,6 +82,7 @@ actor DownloadTask: Identifiable {
     }
 
     // perform download
+    // swiftlint:disable:next cyclomatic_complexity
     func download(_ downloadIndex: Int, from source: Source, to directory: URL) async {
         guard downloads.count >= downloadIndex else { return }
 

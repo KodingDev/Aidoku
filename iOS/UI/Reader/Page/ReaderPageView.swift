@@ -248,7 +248,7 @@ class ReaderPageView: UIView {
         }
 
         if let image = ImagePipeline.shared.cache.cachedImage(for: ImageRequest(url: url)) {
-            imageView.image = image.image
+            setPageImage(image: image.image, page: page)
             return
         }
 
